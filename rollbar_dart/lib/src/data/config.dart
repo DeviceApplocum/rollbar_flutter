@@ -61,7 +61,7 @@ class Config implements Serializable {
     String? accessToken,
     String? endpoint,
     String? environment,
-    String? framework = 'ios',
+    String? framework,
     String? codeVersion,
     String? package,
     String? persistencePath,
