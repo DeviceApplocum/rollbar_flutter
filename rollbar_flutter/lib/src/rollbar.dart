@@ -1,17 +1,17 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
-
 import 'package:rollbar_dart/rollbar.dart';
 
-import 'hooks/hook.dart';
 import 'hooks/flutter_hook.dart';
-import 'hooks/platform_hook.dart';
+import 'hooks/hook.dart';
 import 'hooks/native_hook.dart';
-import 'platform_transformer.dart';
+import 'hooks/platform_hook.dart';
 import 'method_channel.dart';
+import 'platform_transformer.dart';
 
 typedef RollbarClosure = FutureOr<void> Function();
 
@@ -52,7 +52,7 @@ class RollbarFlutter {
     WidgetsFlutterBinding.ensureInitialized();
 
     await Rollbar.run(config.copyWith(
-      framework: 'Android',
+      framework: Platform.isIOS ? 'ios' : 'Android',
       persistencePath: await _platform.persistencePath,
       transformer: (_) => PlatformTransformer(),
     ));
