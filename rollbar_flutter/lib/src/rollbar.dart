@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -52,7 +51,7 @@ class RollbarFlutter {
     WidgetsFlutterBinding.ensureInitialized();
 
     await Rollbar.run(config.copyWith(
-      framework: 'iOS',
+      framework: 'ios',
       persistencePath: await _platform.persistencePath,
       transformer: (_) => PlatformTransformer(),
     ));

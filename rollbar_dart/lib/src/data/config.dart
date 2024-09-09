@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:meta/meta.dart';
 import 'package:http/http.dart' as http;
+import 'package:meta/meta.dart';
 import 'package:rollbar_common/rollbar_common.dart';
 import 'package:rollbar_dart/src/sandbox/isolated_sandbox.dart';
 
 import '../../rollbar.dart';
-import '../notifier/core_notifier.dart';
 import '../marshaller/data_marshaller.dart';
-import '../transformer/noop_transformer.dart';
+import '../notifier/core_notifier.dart';
 import '../sender/persistent_http_sender.dart';
+import '../transformer/noop_transformer.dart';
 
 /// The class of types that are [Configurable] through a [Config] instance.
 abstract class Configurable {
@@ -42,7 +42,7 @@ class Config implements Serializable {
     required this.accessToken,
     this.endpoint = 'https://api.rollbar.com/api/1/item/',
     this.environment = Environment.mode,
-    this.framework = 'dart',
+    this.framework = 'ios',
     this.codeVersion = 'main',
     this.package,
     this.persistencePath = './',
@@ -61,7 +61,7 @@ class Config implements Serializable {
     String? accessToken,
     String? endpoint,
     String? environment,
-    String? framework,
+    String? framework = 'ios',
     String? codeVersion,
     String? package,
     String? persistencePath,
