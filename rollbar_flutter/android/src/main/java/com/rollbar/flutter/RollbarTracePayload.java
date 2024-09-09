@@ -44,8 +44,8 @@ class RollbarTracePayload extends RuntimeException {
             .environment(config.environment())
             .codeVersion(config.codeVersion())
             .platform(config.platform())
-            .language('java')
-            .framework('android')
+            .language(config.language())
+            .framework(config.framework())
             .body(body);
 
     // Gather data from providers.

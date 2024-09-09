@@ -42,7 +42,7 @@ class Config implements Serializable {
     required this.accessToken,
     this.endpoint = 'https://api.rollbar.com/api/1/item/',
     this.environment = Environment.mode,
-    this.framework = 'ios',
+    this.framework = '',
     this.codeVersion = 'main',
     this.package,
     this.persistencePath = './',
