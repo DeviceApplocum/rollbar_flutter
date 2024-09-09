@@ -20,7 +20,7 @@ void main() {
     when(sender.send(any)).thenAnswer((_) async => true);
 
     callsReceived = [];
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, (methodCall) async {
       callsReceived.add(methodCall);
       return '42';
@@ -29,7 +29,7 @@ void main() {
 
   tearDown(() {
     debugDefaultTargetPlatformOverride = null;
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+    TestDefaultBinaryMessengerBinding.instance?.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, null);
   });
 

@@ -52,7 +52,7 @@ class RollbarFlutter {
     WidgetsFlutterBinding.ensureInitialized();
 
     await Rollbar.run(config.copyWith(
-      framework: 'flutter',
+      framework: 'Android',
       persistencePath: await _platform.persistencePath,
       transformer: (_) => PlatformTransformer(),
     ));
