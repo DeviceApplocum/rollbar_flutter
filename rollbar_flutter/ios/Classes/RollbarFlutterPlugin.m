@@ -22,8 +22,6 @@
         config.destination.accessToken = (NSString *)arguments[@"accessToken"];
         config.destination.environment = (NSString *)arguments[@"environment"];
         config.loggingOptions.codeVersion = (NSString *)arguments[@"codeVersion"];
-        config.framework = (NSString *)arguments[@"framework"];  // Set framework
-
 
         [Rollbar initWithConfiguration:config];
 
