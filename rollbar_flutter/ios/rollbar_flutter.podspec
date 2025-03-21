@@ -12,15 +12,21 @@ Connect your Flutter applications to Rollbar for error reporting.
   s.homepage         = 'http://example.com'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Rollbar' => 'support@rollbar.com' }
-  s.source           = { :path => '.' }
+
+  # Use your forked repository
+  s.source           = { :git => 'https://github.com/DeviceApplocum/rollbar-flutter.git', :branch => 'main' }
+
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'RollbarNotifier', :git => 'https://github.com/DeviceApplocum/rollbar-apple.git', :branch => 'main'
+
+  # Ensure RollbarNotifier is pulled from your fork
+  s.dependency 'RollbarNotifier', :git => 'https://github.com/DeviceApplocum/rollbar-apple.git', :branch => 'master'
+
   s.static_framework = true
   s.platform = :ios, '11.0'
 
-  # Flutter.framework does not contain a i386 slice.
+  # Flutter.framework does not contain an i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES',
                             'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
 end
