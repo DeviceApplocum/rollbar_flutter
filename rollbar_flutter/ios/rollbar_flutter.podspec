@@ -14,7 +14,7 @@ Connect your Flutter applications to Rollbar for error reporting.
   s.author           = { 'Rollbar' => 'support@rollbar.com' }
 
   # Use your forked repository
-  s.source           = { :git => 'https://github.com/DeviceApplocum/rollbar-flutter.git', :branch => 'main' }
+  s.source           = { :git => 'https://github.com/DeviceApplocum/rollbar-flutter.git', :branch => 'master' }
 
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
