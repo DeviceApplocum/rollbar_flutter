@@ -21,7 +21,7 @@ Connect your Flutter applications to Rollbar for error reporting.
   s.dependency 'Flutter'
 
   # Ensure RollbarNotifier is pulled from your fork
-  s.dependency 'RollbarNotifier', '>= 3.2.0', :git => 'https://github.com/DeviceApplocum/rollbar-apple.git', :branch => 'master'
+  s.dependency 'RollbarNotifier', :git => 'https://github.com/DeviceApplocum/rollbar-apple.git', :branch => 'master'
 
   s.static_framework = true
   s.platform = :ios, '11.0'
